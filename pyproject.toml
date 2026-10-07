@@ -1,0 +1,9 @@
+[project]
+name = "enterprise-rag-grounding"
+version = "0.1.0"
+description = "Enterprise RAG with calibrated abstention and citation verification"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

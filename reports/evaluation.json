@@ -1,0 +1,102 @@
+{
+  "retrieval": {
+    "BM25": {
+      "recall@1": 0.6111111111111112,
+      "recall@3": 0.8194444444444444,
+      "recall@5": 0.875,
+      "mrr": 0.7218497286221469
+    },
+    "LSA": {
+      "recall@1": 0.6111111111111112,
+      "recall@3": 0.7777777777777778,
+      "recall@5": 0.8333333333333334,
+      "mrr": 0.7126923310831358
+    },
+    "BM25 + PRF": {
+      "recall@1": 0.5972222222222222,
+      "recall@3": 0.8194444444444444,
+      "recall@5": 0.8888888888888888,
+      "mrr": 0.7121839781625023
+    },
+    "Hybrid (BM25 + LSA, RRF)": {
+      "recall@1": 0.5972222222222222,
+      "recall@3": 0.8194444444444444,
+      "recall@5": 0.8472222222222222,
+      "mrr": 0.7100921973147014
+    }
+  },
+  "abstention": {
+    "chosen_signal": "BM25 top score",
+    "auroc_dev": {
+      "BM25 top score": 0.8078703703703705,
+      "idf coverage (top-3)": 0.6134259259259259,
+      "LSA top cosine": 0.5995370370370371
+    },
+    "auroc_test": {
+      "BM25 top score": 0.8796296296296298,
+      "idf coverage (top-3)": 0.9236111111111112,
+      "LSA top cosine": 0.7777777777777779
+    },
+    "threshold": 4.3435781421368285,
+    "test_answerable_kept": 0.6944444444444444,
+    "test_unanswerable_rejected": 1.0,
+    "n_test": [
+      36,
+      6
+    ]
+  },
+  "verifier": {
+    "clean extractive": {
+      "flagged": 0,
+      "total": 72,
+      "rate": 0.0
+    },
+    "clean short": {
+      "flagged": 1,
+      "total": 72,
+      "rate": 0.013888888888888888
+    },
+    "wrong number": {
+      "flagged": 43,
+      "total": 43,
+      "rate": 1.0
+    },
+    "wrong citation": {
+      "flagged": 71,
+      "total": 71,
+      "rate": 1.0
+    },
+    "wrong number from the same section": {
+      "flagged": 0,
+      "total": 21,
+      "rate": 0.0
+    },
+    "fabricated claim (with number)": {
+      "flagged": 71,
+      "total": 71,
+      "rate": 1.0
+    },
+    "fabricated claim (no number)": {
+      "flagged": 71,
+      "total": 71,
+      "rate": 1.0
+    }
+  },
+  "end_to_end": {
+    "rank_bonus_dev_grid": {
+      "0.01": 0.4722222222222222,
+      "0.5": 0.4722222222222222,
+      "1.0": 0.4722222222222222,
+      "2.0": 0.4722222222222222,
+      "4.0": 0.5
+    },
+    "chosen_rank_bonus": 4.0,
+    "n_answerable": 36,
+    "gold_section_in_top3": 0.8333333333333334,
+    "answer_correct_without_abstention": 0.5555555555555556,
+    "answer_correct_with_abstention": 0.5,
+    "verified": 1.0,
+    "n_unanswerable": 6,
+    "correctly_abstained": 1.0
+  }
+}
